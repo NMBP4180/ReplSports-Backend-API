@@ -21,6 +21,6 @@ app.use('/api/otp',otpRouter);
 app.use('*',(req, res) =>{
   res.status(404).send('Route Not found');
 });
-app.listen(port, () => {
-  console.log(`Server is running on port https://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server is running on port https://localhost:${port}`);
+// });
