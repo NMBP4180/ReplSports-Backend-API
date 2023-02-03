@@ -22,7 +22,7 @@ app.use('*',(req, res) =>{
   res.status(404).send('Route Not found');
 });
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log('backend running')
    })
 // app.listen(port, () => {
