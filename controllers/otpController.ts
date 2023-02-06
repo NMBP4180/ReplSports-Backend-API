@@ -6,17 +6,13 @@ import twilio from 'twilio';
 export class otpController {
     static async sendotp(req: Request, res: Response) {
             const otp = new otpModel();
-        //     function between(min, max) {  
-        //         return Math.floor(
-        //           Math.random() * (max - min + 1) + min
-        //         )
-        // }
         const OTP = Math.floor(Math.random() * 1000000);
-            const returnValue: string = await otp.sendotp({
+            const returnValue: string = await otp.sendotp({                
                 mobileNo: req.body.mobileNo,
                 otp:OTP,
                 create_at: new Date(),
               });
+              
               const accountSid = "ACb686b5442482641faffedc962cce3015";
 const authToken = "935bf3ad237bd87e5f233e78934445e7";
 const client =twilio(accountSid, authToken);
@@ -30,6 +26,7 @@ client.messages
             res.status(200);
             res.send(returnValue);
     }
+
     static async verifyotp(req:Request, res: Response) {
         const otp = new otpModel();
         const returnValue: IotpModel[] = await otp.verifyotp(req.params.verifyotp);
