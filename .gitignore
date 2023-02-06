@@ -1,16 +1,16 @@
-# lib-cov
-# *.seed
-# *.log
-# *.csv
-# *.dat
-# *.out
-# *.pid
-# *.gz
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
 # .env
 
-# pids
-# logs
-# results
-# build
-# node_modules
-# document
+pids
+logs
+results
+build
+node_modules
+document
