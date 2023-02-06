@@ -5,7 +5,7 @@
   "main": "server.ts",
   "type": "module",
   "scripts": {
-    "start": "node your-script.js",
+    "start": "node server.ts",
     "dev": "nodemon server.ts --es-module-specifier-resolution=node"
   },
   "keywords": [],
